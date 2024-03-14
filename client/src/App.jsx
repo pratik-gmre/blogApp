@@ -6,11 +6,16 @@ import { Dashboard } from "./pages/Dashboard";
 import { Signin } from "./pages/Signin";
 import { Signup } from "./pages/Signup";
 import { Project } from "./pages/Project";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
+
+
 
 function App() {
   return (
     <>
       <BrowserRouter>
+<Header/>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/about" element={<About/>}></Route>
@@ -19,6 +24,7 @@ function App() {
         <Route path="/signup" element={<Signup/>}></Route>
         <Route path="/project" element={<Project/>}></Route>
       </Routes>
+      <Footer/>
       </BrowserRouter>
     </>
   );
